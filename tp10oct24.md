@@ -14,7 +14,6 @@ L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulati
 1.4 Créer à l'aide des commandes mkdir et touch l'arborescence suivante : figure1
 (touch permet notamment de créer un fichier vide)
 
->>>>>>> fb16e00 (changement du git)
 1.5 Renommer le fichier foto10.jpg en foto20.jpg
 
 1.6 Se placer dans le répertoire ete24 et déplacer les fichiers situés dans le répertoire montagne dans le répertoire mer
