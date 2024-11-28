@@ -1,19 +1,20 @@
-# TP 10 octobre 2024
+# TP 10 octobre 202
 ## 1- Manipulation de fichier 
-
 
 L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulation et l'édition de fichiers.
 
-# 1/Manipulation de fichiers
+1/ #Manipulation de fichiers
 
-1.1 vérification du répértoire de travail courant initial par la commande _**pwd**_ : /home/jonas
+1.1 Vérifier le répertoire de travail courant initial par la commande _*pwd*_:/home/jonas
 
-1.2 Liste des fihciers présents dans ce répértoire via la commande _**ls**_ :  _README.md  TP-OS  ecolo.md  kabylie_
+1.2 Lister les fichiers présents dans ce répertoire via la commande _*ls*_: README.md TP-OS ecolo.md kabylie
 
-1.3 Les fichiers ne sont pas tous visibles, pour faire apparaître les fichiers cachés, on utilise la commande _**ls-la**_
+1.3 Tous les fichiers sont-ils visibles ? Comment les faire apparaître ?
 
-1.4 Création à l'aide des commandes _**mkdir**_ et _**touch**_ l'arborescence de la _figure 1_ du tp du 10 octobre 2024 avec la commande  : 
+1.4 Créer à l'aide des commandes mkdir et touch l'arborescence suivante : figure1
+(touch permet notamment de créer un fichier vide)
 
+>>>>>>> fb16e00 (changement du git)
 1.5 Renommer le fichier foto10.jpg en foto20.jpg
 
 1.6 Se placer dans le répertoire ete24 et déplacer les fichiers situés dans le répertoire montagne dans le répertoire mer
@@ -53,7 +54,7 @@ l. 16 Déplacer les fichiers sous mer dans le répertoire ete21
 
 2.1 Créer un répertoire nommé exo2 et dans ce dossier, à l'aide de l'éditeur vi, créer 2 fichiers composés d'au moins 5 lignes contenant les informations suivantes :
 Fichier 1 : pregen 
-prénom de l'étudiant     genre (masculin, féminin, )  
+prénom de l'étudiant     genre (masculin, féminin, ) 
 
 Fichier 2 : prenum 
 prénom de l'étudiant     nombre entier (entre 1 et 1000) tous différents
