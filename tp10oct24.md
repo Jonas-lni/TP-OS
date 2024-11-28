@@ -1,5 +1,11 @@
 # TP 10 octobre 2024
-## 1/ Manipulation de fichier 
+## 1- Manipulation de fichier 
+
+
+L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulation et l'édition de fichiers.
+
+# 1/Manipulation de fichiers
+
 1.1 vérification du répértoire de travail courant initial par la commande _**pwd**_ : /home/jonas
 
 1.2 Liste des fihciers présents dans ce répértoire via la commande _**ls**_ :  _README.md  TP-OS  ecolo.md  kabylie_
@@ -7,20 +13,6 @@
 1.3 Les fichiers ne sont pas tous visibles, pour faire apparaître les fichiers cachés, on utilise la commande _**ls-la**_
 
 1.4 Création à l'aide des commandes _**mkdir**_ et _**touch**_ l'arborescence de la _figure 1_ du tp du 10 octobre 2024 avec la commande  : 
-
-TP du 10 octobre 2024
-L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulation et l'édition de fichiers.
-1/ #Manipulation de fichiers
-Se connecter à un shell bash
-
-1.1 Vérifier le répertoire de travail courant initial par la commande pwd
-
-1.2 Lister les fichiers présents dans ce répertoire via la commande ls ?
-
-1.3 Tous les fichiers sont-ils visibles ? Comment les faire apparaître ?
-
-1.4 Créer à l'aide des commandes mkdir et touch l'arborescence suivante : figure1
-(touch permet notamment de créer un fichier vide)
 
 1.5 Renommer le fichier foto10.jpg en foto20.jpg
 
@@ -57,7 +49,7 @@ l. 16 Déplacer les fichiers sous mer dans le répertoire ete21
 
 1.21 A partir du man ls, trouver la(les) option(s) à ajouter à la commande ls afin d'obtenir la liste détaillée des fichiers du répertoire /usr/bin rangés dans Itordre de taille croissante avec une lecture aisée de la taille du fichier. L'usage de chaque option doit être justifiée.
 
-2 / #Edition de fichiers
+# 2- Edition de fichiers
 
 2.1 Créer un répertoire nommé exo2 et dans ce dossier, à l'aide de l'éditeur vi, créer 2 fichiers composés d'au moins 5 lignes contenant les informations suivantes :
 Fichier 1 : pregen 
@@ -70,7 +62,7 @@ prénom de l'étudiant     nombre entier (entre 1 et 1000) tous différents
 
 2.3 Visualiser rapidement les fichiers générés par la commande cat
 
-3 / #Quelques opérations sur les fichiers texte
+# 3 -Quelques opérations sur les fichiers texte
 
 3.1 Afficher les 2 premières lignes du fichier pregen
 
@@ -86,7 +78,7 @@ prénom de l'étudiant     nombre entier (entre 1 et 1000) tous différents
 
 3.7 Que proposez-vous si l'on souhaite les champs dans l'ordre suivant : prénom genre nombre
 
-4/ #Divers
+# 4 -Divers
 
 4.1 Afficher l'historique des commandes
 
