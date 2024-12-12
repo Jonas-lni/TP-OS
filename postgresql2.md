@@ -75,13 +75,13 @@ ________________________________________
 ________________________________________
 ## Commandes d'administration :
 
-•	_\conninfo_ :
+•	**_\conninfo_** :
 
-•	_\encodage_ : Affiche
+•	**_\encodage_** : Affiche
 
-•	_VIDE;_ : Nettoyez et optimisez la base de données.
+•	**_VIDE;_** : Nettoyez et optimisez la base de données.
 
-•	_ANALYSER;_ : Collecte des statistiques pour le suivi des requêtes.
+•	**_ANALYSER;_** : Collecte des statistiques pour le suivi des requêtes.
 
 •	**RÉINDEXER LA TABLE nom_table;**: Réindexer une table.
 
