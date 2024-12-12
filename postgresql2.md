@@ -11,17 +11,17 @@ Voici une liste utile des commandes PostgreSQL pour différents contextes, avec 
 ________________________________________
 ## Commandes de base :
 
-•	_\l_ : Liste les bases de données
+•	**_\l_** : Liste les bases de données
 
-•	_\c_ [nom_bdd] : Connecté
+•	**_\c_** [nom_bdd] : Connecté
 
-•	_\dt_ : Liste les tableaux
+•	**_\dt_** : Liste les tableaux
 
-•	_\d_ [nom_table] : Montre la structure
+•	**_\d_** [nom_table] : Montre la structure
 
-•	_\du_ : Liste des utilisateurs et de leurs rô
+•	**_\du_** : Liste des utilisateurs et de leurs rô
 
-•	_\q_ : Quittez l'interface psql.
+•	**_\q_** : Quittez l'interface psql.
 ________________________________________
 ## Gestion des bases de données :
 
