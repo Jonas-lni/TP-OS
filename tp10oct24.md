@@ -28,7 +28,7 @@ L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulati
 
 1.5 Renommer le fichier foto10.jpg en foto20.jpg : ->  **mv foto10.jpg foto20.jpg**
 
-1.6 Se placer dans le répertoire ete24 et déplacer les fichiers situés dans le répertoire montagne dans le répertoire mer
+1.6 Se placer dans le répertoire ete24 et déplacer les fichiers situés dans le répertoire montagne dans le répertoire mer :** ->**  **mv /home/jonas/TP-OS/exo1/ete21/montagne /home/jonas/TP-OS/exo1/ete21/mer**
 
 1.7 En utilisant uniquement des chemins absolus
 
