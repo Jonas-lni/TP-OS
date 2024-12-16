@@ -26,7 +26,7 @@ L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulati
 
 **touch exo1/ete24/foto10.jpg** :  _création du fichier du dossier ete24_
 
-1.5 Renommer le fichier foto10.jpg en foto20.jpg
+1.5 Renommer le fichier foto10.jpg en foto20.jpg : ->  **mv foto10.jpg foto20.jpg**
 
 1.6 Se placer dans le répertoire ete24 et déplacer les fichiers situés dans le répertoire montagne dans le répertoire mer
 
