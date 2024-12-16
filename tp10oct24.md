@@ -30,7 +30,7 @@ L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulati
 
 1.6 Se placer dans le répertoire ete24 et déplacer les fichiers situés dans le répertoire montagne dans le répertoire mer :
 
-  **mv /home/jonas/TP-OS/exo1/ete21/montagne /home/jonas/TP-OS/exo1/ete21/mer**
+   _mv /home/jonas/TP-OS/exo1/ete21/montagne/ *  /home/jonas/TP-OS/exo1/ete21/mer_
 
 1.7 En utilisant uniquement des chemins absolus
 
