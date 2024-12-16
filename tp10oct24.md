@@ -14,17 +14,17 @@ L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulati
 1.4 Créer à l'aide des commandes mkdir et touch l'arborescence suivante : figure1
 (touch permet notamment de créer un fichier vide) _* les commandes suivantes nous permettent de créer l'arborescence de la figure N°1 :
 
-**_ mkdir -p exo1/{ete21/{mer,montagne},ete22,ete23,ete24}_** : crée les dossiers 
+_** mkdir -p exo1/{ete21/{mer,montagne},ete22,ete23,ete24}**_ : crée les dossiers 
 
-**_ touch exo1/ete21/mer/foto{1,2}{.jpg,.txt}_**
+_** touch exo1/ete21/mer/foto{1,2}{.jpg,.txt}**_
 
-**_ touch exo1/ete21/montagne/foto3{.jpg,.txt}{}_**
+_** touch exo1/ete21/montagne/foto3{.jpg,.txt}{}**_
 
-**_ touch exo1/ete22/foto{4,5,6,7}{.jpg,.txt}_**
+_** touch exo1/ete22/foto{4,5,6,7}{.jpg,.txt}**_
 
-**_ touch exo1/ete23/foto{8,9}.jpg_**
+_** touch exo1/ete23/foto{8,9}.jpg**_
 
-**_ touch exo1/ete24/foto10.jpg_**
+_** touch exo1/ete24/foto10.jpg**_
 
 1.5 Renommer le fichier foto10.jpg en foto20.jpg
 
