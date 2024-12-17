@@ -153,15 +153,28 @@ Le nombre de ligne du fichier prenum
 
 3.4 Afficher uniquement la colonne des nombres du fichier prenum
 
+	cut -d ' ' -f 1 prenum
+
 3.5 Afficher le fichier prenum en triant sur les nombres du plus grand au plus petit
+
+	sort -k2 -r prenum
 
 3.6 Réaliser un affichage synthétique des informations contenues dans les fichiers. Le résultat obtenu doit être de la forme : prénom nombre genre
 
+	awk '{print $1, $2, $3}' prenum pregen
+
 3.7 Que proposez-vous si l'on souhaite les champs dans l'ordre suivant : prénom genre nombre
+
+	awk '{print $1, $3, $2}' pregen
+
 
 # 4 -Divers
 
 4.1 Afficher l'historique des commandes
 
+	history
+
 4.2 Proposer 2 façons de rejouer la dernière commande sort
 
+ **1-la première façon c'est de retourner en arrière avec la flèche vers le haut**
+ ** 2- avec la commande : !!**
