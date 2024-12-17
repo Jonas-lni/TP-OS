@@ -1,3 +1,4 @@
+
 # TP 10 octobre 202
 ## 1- Manipulation de fichier 
 
@@ -94,8 +95,19 @@ l. 16 Déplacer les fichiers sous mer dans le répertoire ete21 :
 
 1.21 Proposer un diagramme de la nouvelle arborescence (dans un style semblable à la figure 1).	 
 
-1.21 A partir du man ls, trouver la(les) option(s) à ajouter à la commande ls afin d'obtenir la liste détaillée des fichiers du répertoire /usr/bin rangés dans Itordre de taille croissante avec une lecture aisée de la taille du fichier. L'usage de chaque option doit être justifiée.
+	mkdir -p stock/{stock1/{farine,ble},stock2/{mais,sarrasin},stock3,stock4,stock5}
 
+1.22 A partir du man ls, trouver la(les) option(s) à ajouter à la commande ls afin d'obtenir la liste détaillée des fichiers du répertoire /usr/bin rangés dans Itordre de taille croissante avec une lecture aisée de la taille du fichier. L'usage de chaque option doit être justifiée.
+
+	ls -lS --reverse --human-readable /usr/bin
+
+ **ls : liste**
+ **-l : afficharge de la liste détaillée des fichiers**
+ **-S : Trie les fichiers par ordre décroissant**
+ **--reverse : inverse l'ordre de tri décroissant de -S**
+ **-h: affiche les fichiers dans un format lisible**
+ **/usr/bin : le répertoire dans lequel la commande de recherche a été effectuée** 
+	
 # 2- Edition de fichiers
 
 2.1 Créer un répertoire nommé exo2 et dans ce dossier, à l'aide de l'éditeur vi, créer 2 fichiers composés d'au moins 5 lignes contenant les informations suivantes :
