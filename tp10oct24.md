@@ -16,17 +16,17 @@ L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulati
 1.4 Créer à l'aide des commandes mkdir et touch l'arborescence suivante : figure1
 (touch permet notamment de créer un fichier vide) _* les commandes suivantes nous permettent de créer l'arborescence de la figure N°1 :
 
-**mkdir -p exo1/{ete21/{mer,montagne},ete22,ete23,ete24}** : _création des dossiers_ 
+	mkdir -p exo1/{ete21/{mer,montagne},ete22,ete23,ete24} :création des dossiers 
 
-**touch exo1/ete21/mer/foto{1,2}{.jpg,.txt}** : _création des fichiers du dossier mer_
+	touch exo1/ete21/mer/foto{1,2}{.jpg,.txt} : création des fichiers du dossier mer
 
-**touch exo1/ete21/montagne/foto3{.jpg,.txt}** : _création des fichiers du dossier montagne_
+	touch exo1/ete21/montagne/foto3{.jpg,.txt} : création des fichiers du dossier montagne
 
-**touch exo1/ete22/foto{4,5,6,7}{.jpg,.txt}** : _création des fichiers du dossier ete22_
+	touch exo1/ete22/foto{4,5,6,7}{.jpg,.txt} : création des fichiers du dossier ete22
 
-**touch exo1/ete23/foto{8,9}.jpg** : _création des fichiers du dossier ete23_
+	touch exo1/ete23/foto{8,9}.jpg : création des fichiers du dossier ete23
 
-**touch exo1/ete24/foto10.jpg** :  _création du fichier du dossier ete24_
+	touch exo1/ete24/foto10.jpg : création du fichier du dossier ete24
 
 1.5 Renommer le fichier foto10.jpg en foto20.jpg :
 
@@ -88,8 +88,11 @@ l. 16 Déplacer les fichiers sous mer dans le répertoire ete21 :
 
 	mv /home/jonas/TP-OS/exo1/ete21/*.jpg /home/jonas/TP-OS/exo1/ete24/
 
+1.20 supprimer les fichiers avec l'extension .txt du répertoire hiver22 : se positionser dans le répertoire **hiver22** avant de taper la commande suivante :
 
-1.20 Proposer un diagramme de la nouvelle arborescence (dans un style semblable à la figure 1).	 
+	rm *.txt	
+
+1.21 Proposer un diagramme de la nouvelle arborescence (dans un style semblable à la figure 1).	 
 
 1.21 A partir du man ls, trouver la(les) option(s) à ajouter à la commande ls afin d'obtenir la liste détaillée des fichiers du répertoire /usr/bin rangés dans Itordre de taille croissante avec une lecture aisée de la taille du fichier. L'usage de chaque option doit être justifiée.
 
