@@ -116,23 +116,40 @@ l. 16 Déplacer les fichiers sous mer dans le répertoire ete21 :
 # 2- Edition de fichiers
 
 2.1 Créer un répertoire nommé exo2 et dans ce dossier, à l'aide de l'éditeur vi, créer 2 fichiers composés d'au moins 5 lignes contenant les informations suivantes :
+
 Fichier 1 : pregen 
+
 prénom de l'étudiant     genre (masculin, féminin, ) 
 
 Fichier 2 : prenum 
+
 prénom de l'étudiant     nombre entier (entre 1 et 1000) tous différents
 
 2.2 Que proposez-vous pour optimiser la création de ces 2 fichiers ?
 
-2.3 Visualiser rapidement les fichiers générés par la commande cat
+ _La commande_ **vi pregen prenum** _permet la création des deux fichiers en même temps_ 
+
+2.3 Visualiser rapidement les fichiers générés par la commande cat : **c'est fait**
 
 # 3 -Quelques opérations sur les fichiers texte
 
-3.1 Afficher les 2 premières lignes du fichier pregen
+3.1 Afficher les 2 premières lignes du fichier pregen :
+
+	head -n 2 pregen
 
 3.2 Afficher depuis la ligne 3 jusqu'à la fin du fichier prenum
 
+	 tail -n +3 prenum | head -n -0
+
 3.3 En utilisant la commande wc compter le nombre de mots dans le fichier pregen puis compter le nombre de lignes du fichier prenum
+	
+Le nombre de mot dans le fichier pregen 	
+
+	**wc -w pregen**
+
+Le nombre de ligne du fichier prenum
+
+	**wc -l prenum**
 
 3.4 Afficher uniquement la colonne des nombres du fichier prenum
 
