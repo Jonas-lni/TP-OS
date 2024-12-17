@@ -102,10 +102,15 @@ l. 16 Déplacer les fichiers sous mer dans le répertoire ete21 :
 	ls -lS --reverse --human-readable /usr/bin
 
  **ls : liste**
+
  **-l : afficharge de la liste détaillée des fichiers**
+
  **-S : Trie les fichiers par ordre décroissant**
+
  **--reverse : inverse l'ordre de tri décroissant de -S**
+
  **-h: affiche les fichiers dans un format lisible**
+
  **/usr/bin : le répertoire dans lequel la commande de recherche a été effectuée** 
 	
 # 2- Edition de fichiers
