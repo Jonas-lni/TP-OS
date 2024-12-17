@@ -11,7 +11,7 @@ L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulati
 
 1.3 Tous les fichiers sont-ils visibles ? Comment les faire apparaître :
 
-	 _**les fichiers ne sont pas tous visibles, pour les faire apparaitre, il faut utiliser la commande ls -la**_
+	 les fichiers ne sont pas tous visibles, pour les faire apparaitre, il faut utiliser la commande ls -la
 
 1.4 Créer à l'aide des commandes mkdir et touch l'arborescence suivante : figure1
 (touch permet notamment de créer un fichier vide) _* les commandes suivantes nous permettent de créer l'arborescence de la figure N°1 :
@@ -30,11 +30,11 @@ L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulati
 
 1.5 Renommer le fichier foto10.jpg en foto20.jpg :
 
-	 **mv foto10.jpg foto20.jpg**
+	 mv foto10.jpg foto20.jpg
 
 1.6 Se placer dans le répertoire ete24 et déplacer les fichiers situés dans le répertoire montagne dans le répertoire mer :
 
-	_mv /home/jonas/TP-OS/exo1/ete21/montagne/ *  /home/jonas/TP-OS/exo1/ete21/mer_
+	mv /home/jonas/TP-OS/exo1/ete21/montagne/ *  /home/jonas/TP-OS/exo1/ete21/mer
 
 1.7 En utilisant uniquement des chemins absolus
 
@@ -42,13 +42,13 @@ L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulati
 
 1.9 Supprimer le répertoire montagne :
 
-	 **rm -r montagne/**
+	 rm -r montagne/
 
 1.10 Quelque que soit votre répertoire courant, proposer 2 commandes permettant de retourner au répertoire initial et appliquer. -> **cd**
 
 1.11 Supprimer le répertoire ete23. Que constatez-vous ? : 
 
-	**rm -r ete23** 
+	rm -r ete23 
 
 j'ai constaté que la suppression a été faite lorsque j'ai ajouté l'oprion **-r**
 
@@ -57,32 +57,36 @@ Appliquer cette commande pour supprimer le répertoire ete23 et ses fichiers
 
 1.13 Que pensez-vous des risques associés à cette commande : 
 
-	**cette commande supprime tous les dossiers et leurs fichiers**, _elle supprime la globalité des données_ 
+	cette commande supprime tous les dossiers et leurs fichiers**, elle supprime la globalité des données
 
 1.14 Renommer le répertoire ete22 en hiver22 :
 
-	 **mv ete22 hiver22**
+	 mv ete22 hiver22
 
 1.15 Copier le fichier foto20.jpg en foto20.txt dans le répertoire ete24 :
 
-	 **mv foto20.jpg foto20.txt** 
+	 mv foto20.jpg foto20.txt
 
 l. 16 Déplacer les fichiers sous mer dans le répertoire ete21 :
 
-	 _mv /home/jonas/TP-OS/exo1//ete21/mer/* /home/jonas/TP-OS/exo1/ete21/_
+	 mv /home/jonas/TP-OS/exo1//ete21/mer/* /home/jonas/TP-OS/exo1/ete21/
 
 1.17 Déplacer les fichiers foto3 sous hiver22 et les renommer foto33 :
 
-	 _mv /home/jonas/TP-OS/exo1/ete21/montagne/* /home/jonas/TP-OS/exo1/hiver22_  **mv foto3.jpg foto33.jpg** **mv foto3.txt foto33.txt**
+	mv /home/jonas/TP-OS/exo1/ete21/montagne/* /home/jonas/TP-OS/exo1/hiver22_  
+
+	mv foto3.jpg foto33.jpg
+
+	mv foto3.txt foto33.txt
 
 1.18 Liste en détail uniquement les fichiers ayant pour extension .txt du répertoire ete21 : 
 
-	_ls *.txt_ 
+	ls *.txt 
 
 
 1.19 Déplacer l'ensemble des fichiers ayant pour extension .jpg du répertoire ete21 vers ete24 1.20 Supprimer les fichiers avec l'extension .txt du répertoire hiver22 :
 
-	 _mv /home/jonas/TP-OS/exo1/ete21/*.jpg /home/jonas/TP-OS/exo1/ete24/_
+	mv /home/jonas/TP-OS/exo1/ete21/*.jpg /home/jonas/TP-OS/exo1/ete24/
 
 
 1.20 Proposer un diagramme de la nouvelle arborescence (dans un style semblable à la figure 1).	 
