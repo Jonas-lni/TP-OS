@@ -60,4 +60,6 @@ ou
 
 	cat /etc/passwd|grep -q "login" && echo "Yes" || echo "No"
 
-**1.9 Le résultat était "No" lorsque j'ai tapé la commande _ grep -q "login" /etc/password && echo "Yes" || echo "No" _ **
+**1.9 Le résultat était "No" lorsque j'ai tapé la commande:**
+
+	grep -q "login" /etc/password && echo "Yes" || echo "No"
