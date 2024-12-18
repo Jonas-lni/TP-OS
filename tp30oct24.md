@@ -4,7 +4,7 @@
 
 ## Prérequis: Machine sous Linux, Shell Bash 
 
-## Grep, Find, Pipe, Redirection
+## 1/ Grep, Find, Pipe, Redirection
 
 Ecrire les commandes permettant de :
 
@@ -69,4 +69,20 @@ ou
 _**exemple:**_
 
 	grep -q "login" /etc/password && echo "Yes" || echo "No"> /dev/null
+
+## 2/ Tubes nommés
+
+	#!/bin/bash
+	mkfifo ~/testing/tube0 2>/dev/null
+	mkfifo ~/testing/tube1 2>/dev/null
+	mkfifo ~/testing/tube2 2>/dev/null
+	fot i in {1..20}
+	do
+	   tirage=${RANDOM}
+	   choix_tube=`expr $tirage % 3`
+	   echo -e "iteration=$i \t tirage=$tirage \t prochain tube=$choix_tube"
+	   echo -n $tirage", " > ~/testing/tube$choix_tube
+	   sleep 0.3
+	done
+
 
