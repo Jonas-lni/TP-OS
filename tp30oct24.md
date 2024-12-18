@@ -63,3 +63,10 @@ ou
 **1.9 Le résultat était "No" lorsque j'ai tapé la commande:**
 
 	grep -q "login" /etc/password && echo "Yes" || echo "No"
+
+**1.10 pour éviter les message complémentaire nous pouvons rediriger vers /dev/null**
+
+_**exemple:**_
+
+	grep -q "login" /etc/password && echo "Yes" || echo "No"> /dev/null
+
