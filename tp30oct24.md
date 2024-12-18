@@ -86,3 +86,64 @@ _**exemple:**_
 	done
 
 
+**2.1 Explication des ligne en gras**
+
+	mkfifo ~/testing/tube0 2>/dev/null
+
+
+-> est la création d'un tube nommé **tube0** dans le dossier **testing** qui se trouve dans ~/ **home**. **2>** est la redirection des messages d'erreur vers **/dev/null** pour que les données d'erreur soient ignorées 
+
+	choix_tube=`expr $tirage % 3`
+
+->**choix_tube=** est l'attribution d'une valeur à une variable nommée **choix_tube** . **expr** est utilisée pour manipuler des chaines de caractères, dans ce cas, elle est utilisée pour faire une division modulaire avec le **%** et **$tirage** la valeur de la variable tirage . **%3** c'est pour renvoyer le reste de la division 
+
+	echo -n $tirage", " > ~/testing/tube$choix_tube
+
+-> Elle écrit dans un fichier qui a un nom en fonction de la variable choix_tube. le résultat est une valeur suivi d'une virgule
+
+
+**2.2 Le fonctionnement du script** est la création de trois tubes 
+
+**3.2 La commande cat ~/testing/tube N° nous permet de lire et d'observer le tube**
+
+
+## 3/ Alias et configuration Bash 
+
+**3.1 Proposition d'un alias permettant de lister les fichiers d'un répertoire sans la couleur mais en suffixant les répértoires par le caractére / pour les identifier**
+
+	alias lsnocolor='ls --classify --color=never'
+
+**3.2 Proposition d'un alias ayant pour nom ptxt qui retourne la chaine "X fichiers txt présent" ou le nombre X représente la quantité de fichiers avec l'extension .txt présents dans le répertoire courant duquel la commande est lancée, rien sinon** **_elle est un peu difficile pour moi_**
+
+**3.3 Proposition d'une méthode pour que ces alias soient persistants après un reboot**
+
+Pour rendre les alias persistants après une résolution, il faut les enregistrer dans le fichier de configuration du shell que vous utilisez (par exemple, .bashrcou .zshrcselon votre shell). Voici comment procéder
+
+## 4/ Utilisateurs
+
+**4.1 Création des utilisateurs Albert Einstein et Niels Bohr ayant pour nom de login respectifs einstein et bohr**
+
+**4.2 Initialisation des mots de passe à albert pour einstein et niels pour bohr**
+
+**4.3 Création de groupe nommmé physiciens**
+
+**4.4 Ajout d'einstein et de bohr dans le groupe**
+
+**4.5 Connection comme einstein grâce à la commande su - einstein dans un nouveau terminal**
+
+**4.6 Vérificationdes identifiants en tant qu'einstein**
+
+**4.7 Si bohr est absent plusieurs semaines, dans le cadre de la sécurité je propose le vérouillage du compte bohr dans le compte administrateur**
+
+**4.8 Réinitialisation du mot de passe de bohr à la valeur henrik**
+
+**4.9 se connecter dans un nouveau terminal comme bohr**
+
+**4.10 Création d'un fichier dans le homedir**
+
+**4.11 Changement de groupe pour aller dans le groupe physiciens**
+
+**4.12 Création d'un nouveau fichier dans le homedir**
+
+**4.13 réalisation d'un listing détaillé des 2 fichiers crées**
+
