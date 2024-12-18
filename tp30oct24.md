@@ -12,6 +12,7 @@ Ecrire les commandes permettant de :
 
 	cat /etc/passwd | grep bin | wc -l   
 ou
+
 	cat /etc/passwd | grep bin -c
 
 1.2 Compter le nombre d'occurence de "bin" dans le fichier passwd : 
