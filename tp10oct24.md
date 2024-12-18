@@ -2,7 +2,7 @@
 
 ## Avec Monsieur GIRAULT
 
-## 1- Manipulation de fichier 
+## 1- Manipulation des fichiers 
 
 L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulation et l'édition de fichiers.
 
