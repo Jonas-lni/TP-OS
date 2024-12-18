@@ -133,7 +133,7 @@ Pour rendre les alias persistants après une résolution, il faut les enregistre
 
 **4.6 Vérificationdes identifiants en tant qu'einstein**
 
-**4.7 Si _bohr_ est absent plusieurs semaines, dans le cadre de la sécurité je propose le vérouillage du compte bohr dans le compte administrateur**
+**4.7 Si Bohr est absent plusieurs semaines, dans le cadre de la sécurité je propose le vérouillage du compte bohr dans le compte administrateur**
 
 **4.8 Réinitialisation du mot de passe de bohr à la valeur henrik**
 
