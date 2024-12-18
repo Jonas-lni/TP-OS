@@ -121,25 +121,73 @@ Pour rendre les alias persistants après une résolution, il faut les enregistre
 
 ## 4/ Utilisateurs
 
-**4.1 Création des utilisateurs Albert Einstein et Niels Bohr ayant pour nom de login respectifs einstein et bohr**
+**4.1 Création des utilisateurs Albert Einstein et Niels Bohr ayant pour nom de login respectifs einstein et bohr** **_avec le surdoer :_**
+
+	adduser einstein
+
+	adduser bohr
 
 **4.2 Initialisation des mots de passe à albert pour einstein et niels pour bohr**
 
+	mot de passe albert pour einstein
+
+	mot de passe niels pour bohs
+
 **4.3 Création de groupe nommmé physiciens**
+
+	addgroup physiciens
 
 **4.4 Ajout d'einstein et de bohr dans le groupe**
 
+	sudo usermod -aG physiciens bohr
+	
+	sudo usermod -aG physiciens einstein
+
 **4.5 Connection comme einstein grâce à la commande su - einstein dans un nouveau terminal**
 
-**4.6 Vérificationdes identifiants en tant qu'einstein**
+	su - einstein
+	
+**4.6 Vérificationdes de mes identifiants en tant qu'einstein**
 
-**4.7 Si Bohr est absent plusieurs semaines, dans le cadre de la sécurité je propose le vérouillage du compte bohr dans le compte administrateur**
+	whoami -> einstein 
+
+	groups -> einstein users physiciens
+
+	id einstein -> uid=1002(einstein) gid=1002(einstein) groups=1002(einstein),100(users),1004(physiciens)
+
+
+**4.7 Changement du mot de passe d'einstein**
+
+	sudo passwd einstein
+
+_**ça ne marche pas parcequ'einstein n'est pas un administrateur**_
+
+**4.8 Si Bohr est absent plusieurs semaines, dans le cadre de la sécurité je propose le verouillage du compte bohr dans le compte administrateur**
+
+	sudo usermod -L bohr
+
+ **_cela est possible grâce au surdoer_**
+
+pour déverrouiller le compte lorsque l'utilisateur revient, on utilise la commande suivante :
+
+	sudo usermod -U bohr
 
 **4.8 Réinitialisation du mot de passe de bohr à la valeur henrik**
 
-**4.9 Se connecter dans un nouveau terminal comme bohr**
+	passwd 
+
+	Retype new password: 
+	passwd: password updated successfull
+
+**4.9 Se connecter dans un nouveau terminal comme bohr** -> **C'est fait** 
 
 **4.10 Création d'un fichier dans le homedir**
+
+**bohr n'a pas réussi à créer un fichier dans le homedir parcequ'il n'avait pas les droits pour le faire, dans admin je lui donne le droit avec la commande suivante depuis le root**
+
+	usermod -aG sudo bohr
+
+_le problème c'est qu'il a des droits de root_
 
 **4.11 Changement de groupe pour aller dans le groupe physiciens**
 
