@@ -34,3 +34,30 @@ ou
 **1.5 Afficher le numéro des 4 premières lignes ne contenant pas "nologin"**
 
 	
+	cat /etc/passwd |grep -vn nologin|head -4
+
+ou 
+
+	grep -vn "nologin" /etc/passwd|head -4
+
+**1.6 Trouver tous les fichiers de l'arborescence /etc contenant mon nom de login ecrit indifféremment en majuscule ou miniscule**
+
+	grep -r jonas *
+
+et 
+	sudo grep -r jonas *
+
+**1.7 Recherche des fichiers de l'arborescence /etc/ contenant dans leur nom l'expression "tab" et ecrire le résultat dans le fichiers filtabl.txt**
+
+	find /etc -name "*tab*" > filtab.txt
+
+
+**1.8 Affichage de Yes si le fichier /etc/passwd contient le terme login et No si ce n'est pas le cas :
+		
+	grep -q "login" /etc/passwd && echo "Yes" || echo "No"
+
+ou
+
+	cat /etc/passwd|grep -q "login" && echo "Yes" || echo "No"
+**1.9 
+
