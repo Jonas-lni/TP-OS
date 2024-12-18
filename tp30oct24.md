@@ -187,11 +187,29 @@ pour déverrouiller le compte lorsque l'utilisateur revient, on utilise la comma
 
 	usermod -aG sudo bohr
 
-_le problème c'est qu'il a des droits de root_
+_le problème c'est qu'il a des droits de root_ _J'ai enlevé les droits de root dans sudo visudo_
+
+	 touch /home/bohr/bohr.txt
 
 **4.11 Changement de groupe pour aller dans le groupe physiciens**
 
+	sudo -i
+	
+	grep physiciens /etc/group
+
+Vérification de l'existence du groupe physiciens
+
+	sudo usermod -aG physiciens bohr
+
+Cette commande ajoute bohr dans le groupe Physiciens
+
 **4.12 Création d'un nouveau fichier dans le homedir**
+
+	touch /home/bohr/bonhr1.txt
+
 
 **4.13 réalisation d'un listing détaillé des 2 fichiers crées**
 
+	ls -l
+
+	ls -l /home/bohr/bohr.txt /home/bohr/bohr1.txt
