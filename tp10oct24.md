@@ -1,5 +1,7 @@
+## TP Système d'Exploitation du 10  octobre 2024
 
-# TP 10 octobre 202
+## Avec Monsieur GIRAULT
+
 ## 1- Manipulation de fichier 
 
 L'objectif de ce TP de s'initier aux commandes ligne, relatives à la manipulation et l'édition de fichiers.
