@@ -52,12 +52,13 @@ et
 	find /etc -name "*tab*" > filtab.txt
 
 
-**1.8 Affichage de Yes si le fichier /etc/passwd contient le terme login et No si ce n'est pas le cas :
+**1.8 Affichage de Yes si le fichier /etc/passwd contient le terme login et No si ce n'est pas le cas :**
 		
 	grep -q "login" /etc/passwd && echo "Yes" || echo "No"
 
 ou
 
 	cat /etc/passwd|grep -q "login" && echo "Yes" || echo "No"
-**1.9 
+
+**1.9 Le résultat était "No" lorsque j'ai tapé la commande _grep -q "login" /etc/password && echo "Yes" || echo "No"_  
 
