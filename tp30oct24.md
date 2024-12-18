@@ -8,11 +8,11 @@
 
 Ecrire les commandes permettant de :
 
-1.1 Compter le nombre de ligne contenant "bin" dans le fichier /etc/passwd :
+**1.1 Compter le nombre de ligne contenant "bin" dans le fichier /etc/passwd :**
 
 	cat /etc/passwd | grep bin | wc -l   
 ou
 
 	cat /etc/passwd | grep bin -c
 
-1.2 Compter le nombre d'occurence de "bin" dans le fichier passwd : 
+**1.2 Compter le nombre d'occurence de "bin" dans le fichier passwd :** 
