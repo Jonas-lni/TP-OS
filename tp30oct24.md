@@ -16,3 +16,21 @@ ou
 	cat /etc/passwd | grep bin -c
 
 **1.2 Compter le nombre d'occurence de "bin" dans le fichier passwd :** 
+	
+	cat /etc/passwd|grep bin -o|wc -l
+
+**1.3 Afficher les lignes contenant le mot "bin" et pas "sbin"**
+
+	cat /etc/passwd|grep bin| grep -v sbin
+
+ou
+
+	grep bin /etc/passwd |grep -v sbin
+
+**1.4 Création d'un fichier nommé nologin.txt contenant uniquement les lignes ne contenant pas "nologin"**
+
+	cat /etc/passwd | grep -v nologin > nologin.txt
+
+**1.5 Afficher le numéro des 4 premières lignes ne contenant pas "nologin"**
+
+	
