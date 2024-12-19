@@ -29,7 +29,7 @@ Soient les utilisateurs créés précédemment, einstein et bohr, et le groupe p
 
 **1.11 Proposer une solution afin que membres du groupe physiciens puissent lire/modifier les fichiers mais ne puissent effacer que les fichiers dont ils sont les propriétaires.**
 
-##2 / Identification
+## 2/ Identification
 
 **2.1 Via l'utilisation de la commande Ishw, identifier les disque et volumes de votre système**
 
@@ -39,7 +39,7 @@ Soient les utilisateurs créés précédemment, einstein et bohr, et le groupe p
 
 **2.4 Observer les paramètres fournis par la commande smartmonctl**
 
-##3/ Inode
+## 3/ Inode
 
 **3.1 Dans votre répertoire, créer un fichier texte non vide**
 
@@ -103,7 +103,7 @@ Soient les utilisateurs créés précédemment, einstein et bohr, et le groupe p
 
 Remarque : Le FS utilise des caches mémoire, la commande suivante permet de forcer le système à écrire les données en cache sur disque : echo 3 > /proc/sys/vm/drop_caches
 
-##4 Montage et fsck
+## 4/ Montage et fsck
 
 Pour la suite de l'exercice, un disque fictif sera utilisé
 
