@@ -1,0 +1,18 @@
+# TP du 8 janvier 2025
+
+manipulations de fichiers - fifo - TP2- grep - fail -
+**L'examen de demain sera sur le TP n°2 -> grep - find fifo ...... tp du 20 octobre**
+
+## reprise du TP du 20 novembre 2024
+le x sur user-group-other (u+g+o) d'execution pour le répertoire c'est la possibilité de le traverser ou pas **on ne peut exécuter qu'un fichier **
+
+voir la commande **whown** et la commande **id**
+newgroup physiciens -> veut dire que ce que je fais maintenant, je le fais au nom du group physiciens **newgrp**
+more /etc/passwd|grep bohr -> voir à quoi sert cette commande. 
+un fichier appartient à un user, si on veut donner accés à un autre user, il faut le mettre dans un group ou les deux users sont disponible.  **la présence d'un user dans un group suffit pour lui donner les droits d'accés, donner les droits du group est très pratique, elle facilite l'accés des users aux fichiers qui sont dans les groupe** : la commande **chown** nous permet d'avoir des fichiers et des répértoires dans le groupe.
+la commande **gr** nous permet d'afficher les groupes du répértoire.
+**vi fich** nous permet de créer un fichier. 
+
+
+
+
