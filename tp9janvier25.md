@@ -116,3 +116,26 @@ Le file systems doit savoir qu'il y a plus d'espace et qu'il pouvait l'occuper :
  lorsqu'on vérifie -> **df -kh /montage/atosvol** on constate que c'est bien augmenté 
 
 
+## 7/ Remplacement:
+
+**7.1/** Ajout du disque de 3GB au VG mousquetaire ** vgextend mousquetaire /dev/loop35** 
+
+	lvdisplay  **nous a permis d'obtenir le loop35 pour cibler le disque à ajouter dans la ligne de commande vgextend
+
+
+**7.3** 	pvmove /dev/loop33
+
+**7.4**		vgreduce mousquetaire /dev/loop33
+
+#  8/ Rangement :
+
+**8.1**
+
+**8.2**
+
+**8.3**
+
+**8.4**
+
+**8.5**
+
