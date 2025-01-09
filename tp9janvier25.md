@@ -35,3 +35,48 @@ root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop36** création d'un PV asso
 **lvcreate -L 1400MB -n aramis mousquetaire** -> création du volume aramis
 
 
+## 5/ Création de file system :
+
+**5.1** Informations sur atos collectées grâce à la commande **lvdisplay** -> voir atos 
+
+**root@EECS18:** /home/user18/vdisks# **mkfs.ext4 /dev/mousquetaire/atos**
+
+mke2fs 1.46.5 (30-Dec-2021)
+
+Rejet des blocs de périphérique : complété                            
+
+En train de créer un système de fichiers avec 179200 4k blocs et 44832 i-noeuds.
+
+UUID de système de fichiers=8fcb2cb7-fa1a-48bf-bc8a-7cd1175e7a37
+
+Superblocs de secours stockés sur les blocs : 
+
+	32768, 98304, 163840
+
+Allocation des tables de groupe : complété                            
+
+Écriture des tables d'i-noeuds : complété                            
+
+Création du journal (4096 blocs) : complété
+
+Écriture des superblocs et de l'information de comptabilité du système de
+
+fichiers : complété
+
+**5.2** montage des file systems :
+
+Information collectées sur **lvdisplay -m**
+
+root@EECS18:~/vdisks# **sudo mount /dev/mousquetaire/atos /montage/atosvol**
+
+root@EECS18:~/vdisks# **mkdir /montage/aramisvol**
+
+mkdir: impossible de créer le répertoire «/montage/aramisvol»: Le fichier existe
+
+root@EECS18:~/vdisks# **sudo mount /dev/mousquetaire/aramis /montage/aramisvol**
+
+root@EECS18:~/vdisks# mkdir **/montage/prtosvol**
+
+root@EECS18:~/vdisks# **sudo mount /dev/mousquetaire/portos /montage/prtosvol**
+
+root@EECS18:~/vdisks# **mount**
