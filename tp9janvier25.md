@@ -80,3 +80,15 @@ root@EECS18:~/vdisks# mkdir **/montage/prtosvol**
 root@EECS18:~/vdisks# **sudo mount /dev/mousquetaire/portos /montage/prtosvol**
 
 root@EECS18:~/vdisks# **mount**
+
+# 6/ changement de taille: 
+
+On souhaite augmenter la taille du LV atos
+ 
+
+**6.1** Augmentation de la taille du VG mousquetaire à 6GB, avec le disque qui a 3 GB
+
+**lvdisplay -m** on trouve le loop du disque qui à 3GB
+  
+root@EECS18:~/vdisks# **vgextend mousquetaire /dev/loop36** extention du VG mousquetaire   
+
