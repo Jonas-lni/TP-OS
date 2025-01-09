@@ -92,3 +92,10 @@ On souhaite augmenter la taille du LV atos
   
 root@EECS18:~/vdisks# **vgextend mousquetaire /dev/loop36** extention du VG mousquetaire   
 
+**6.3** Augmentation de la taille du LV atos à 1.5GB via la commande lvresize 
+
+**lvresize -L 1.5G /dev/mousquetaire/atos**
+
+	lvdisplay
+
+**6.5** 
