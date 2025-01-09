@@ -33,3 +33,5 @@ root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop36** création d'un PV asso
 **lvcreate -L 700MB -n atos mousquetaire** -> création du volume atos
 
 **lvcreate -L 1400MB -n aramis mousquetaire** -> création du volume aramis
+
+
