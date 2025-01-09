@@ -106,3 +106,13 @@ Le file systems doit savoir qu'il y a plus d'espace et qu'il pouvait l'occuper :
 - la commande root@EECS18:~/vdisks#  **resize2fs /dev/mousquetaire/atos** informe le file systems qu'il peut occuper, l'espace disponible
 
  - lorsque je vérifie avec le commande **df -kh /montage/atosvol** on constate qu'il occupe bien les 1.5GB qui lui ont été alloué  
+
+ **6.10** Augmentation de la taille LV atos à 2GB via la commande **lvresize** avec l'option précedente 
+
+    1- **lvresize -L 2G /dev/mousquetaire/atos**
+
+    2- **resize2fs /dev/mousquetaire/atos**
+
+ lorsqu'on vérifie -> **df -kh /montage/atosvol** on constate que c'est bien augmenté 
+
+
