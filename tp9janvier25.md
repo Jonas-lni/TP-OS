@@ -99,4 +99,10 @@ root@EECS18:~/vdisks# **vgextend mousquetaire /dev/loop36** extention du VG mous
 
 	lvdisplay
 
-**6.5** 
+**6.7** lorsque la commande **df -kh /montage/atosvol** a été tapée pour vérifier si atos avait bien 1.5GB -> nous avons constaté que atos avait toujours 700 MB bien que 1.5GB lui ont été alloués. 
+
+Le file systems doit savoir qu'il y a plus d'espace et qu'il pouvait l'occuper : 
+
+- la commande root@EECS18:~/vdisks#  **resize2fs /dev/mousquetaire/atos** informe le file systems qu'il peut occuper, l'espace disponible
+
+ - lorsque je vérifie avec le commande **df -kh /montage/atosvol** on constate qu'il occupe bien les 1.5GB qui lui ont été alloué  
