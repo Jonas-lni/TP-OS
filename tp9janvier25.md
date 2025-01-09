@@ -14,13 +14,14 @@ wubuntu : interface de microsoft sous ubuntu **intéressant**
 **pvremove  --force  --force /dev/loop34** ->  effacer les loop lié à un disque virtuel
 
 ## 2/Création d'un PV:
-root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop33** création d'un PV associé au disk1
 
-root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop34** création d'un PV associé au disk2
+- root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop33** création d'un PV associé au disk1
 
-root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop35** création d'un PV associé au disk3
+- root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop34** création d'un PV associé au disk2
 
-root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop36** création d'un PV associé au disk4
+- root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop35** création d'un PV associé au disk3
+
+- root@EECS18:/home/user18/vdisks# **pvcreate /dev/loop36** création d'un PV associé au disk4
 
 ## 3/Creation d'un VG:
 
