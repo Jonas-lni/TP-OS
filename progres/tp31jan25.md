@@ -26,7 +26,7 @@ Désactivation du Wifi pour isoler le réseau de l'internet pour voir clairement
         systemctl stop ufw
         systemctl stop NetworkManager 
         nmcli radio wifi off
-
+ok
 
    sysctl net.ipv4    
 
