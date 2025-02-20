@@ -327,3 +327,15 @@ root       35689  0.0  0.0  11780  2560 pts/6    S+   13:47   0:00 grep --color=
 	root@EECS18:~# kill -9 35668
 
 LE script de la section 4 du TP20fev25 sera arrêté grâce à la commande `kill -9 35668`
+
+voir la commande ` xosview`
+
+voir la commande `glances` c'est l'équivalent de `top` pour voir la charge des processus sur la machine
+
+
+
+
+**nohup** -> `nohup shuf -i 1-1000000000 > /tmp/numbers10`
+
+la génération des nombres aléatoires dans numbers10 ne s'arrête pas pour l'arrêter il est nécessaire de passer par `ps aux |grep numbers10` pour trouver le **PID** afin de l'arrêter avec 
+la commande `kill -9 numéro du PID` **trouvé** grâce à la commande ps aux|grep <fichier>
