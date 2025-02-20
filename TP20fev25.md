@@ -335,7 +335,43 @@ voir la commande `glances` c'est l'équivalent de `top` pour voir la charge des 
 
 
 
-**nohup** -> `nohup shuf -i 1-1000000000 > /tmp/numbers10`
+## **nohup** -> `nohup shuf -i 1-1000000000 > /tmp/numbers10`
 
 la génération des nombres aléatoires dans numbers10 ne s'arrête pas pour l'arrêter il est nécessaire de passer par `ps aux |grep numbers10` pour trouver le **PID** afin de l'arrêter avec 
 la commande `kill -9 numéro du PID` **trouvé** grâce à la commande ps aux|grep <fichier>
+
+voir: 			`sleep 10 &  echo "Processus en arrière plan avec PId: $!"`
+
+
+
+les commandes :  **top** et **kill** sont les plus importantes dans ce TP : on les utiliseras souvent  **prof**
+
+	taskset -c 2-4  stress-ng --cpu 10
+	
+	stress-ng ( a chercher) 
+
+ `taskset -c 2,4,6,8  stress-ng --cpu 10`  -> avec cette commande on stress le CPU 2,4,6,8 (on observe que le CPU que nous avons obtenu grâce à **shift** 1 dans top augmente)
+
+ `taskset -pc 1 45308`
+
+ ` taskset -pc 1 45308`
+
+ `ps -eo pid,comm,%cpu --sort=-%cpu | head -10`
+
+  `cpulimit`  pour limiter l'utilisation d'un Cpu : ` cpulimit -l 15 -p 45308` :  45308 est un PID d'un Cpu 
+
+**8.3** reduire le nombre de coeurs 
+
+`cat /sys/device/system/cpu/cpu?/online`    pour afficher le nombre de CPU qui tournent sur notre machine `cat /sys/devices/system/cpu/cpu?/online|wc -l`
+**le cpu0** ne s'arrêtera pas parcequ'il doit tourner tout le temps, c'est le dernier a s'éteindre mais les autres **oui* il s'éteingnent 
+
+`echo 0 > /sys/devices/system/cpu/cpu1/online` Cpu1 éteint et pour l'allumer, il faut remplacer 0 par **1** et on observe l'extinction dans top et son redemarrage. 
+
+
+
+`echo 1 > /sys/devices/system/cpu/cpu1/online` pour l'allumer  et on observe dans top ils reviennt tous, un à un. 
+
+
+ 
+
+`cpufreq-set -g powersave`  et `cpufreq-set -g performance` pour mettre dans powersave et performance 
