@@ -317,9 +317,13 @@ htop
 
 	root@EECS18:~# ps aux | grep s
 script.sh  snap/      
+
 	root@EECS18:~# ps aux | grep script.sh 
+
 root       35668  0.0  0.0  12652  3712 pts/8    S+   13:46   0:00 /bin/bash ./script.sh
+
 root       35689  0.0  0.0  11780  2560 pts/6    S+   13:47   0:00 grep --color=auto script.sh
+
 	root@EECS18:~# kill -9 35668
 
 LE script de la section 4 du TP20fev25 sera arrêté grâce à la commande `kill -9 35668`
