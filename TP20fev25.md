@@ -112,3 +112,108 @@ xclock
  1994  history
 root@EECS18:~# 
 
+comment arreter un script qui tourne en arrière fond sur ubuntu
+ChatGPT a dit :
+
+Il existe plusieurs méthodes pour arrêter un script qui tourne en arrière-plan sur Ubuntu. Voici les solutions :
+🔹 1️⃣ Trouver le Processus et l’Arrêter avec kill
+
+Si tu as lancé un script en arrière-plan (avec &), utilise ps pour le retrouver et kill pour l’arrêter.
+📌 Étape 1 : Trouver le PID du processus
+
+Utilise cette commande pour lister les processus liés à ton script :
+
+ps aux | grep nom_du_script
+
+Exemple :
+
+ps aux | grep mon_script.sh
+
+Cela te donnera une ligne avec un PID (Process ID), par exemple :
+
+user    12345  0.0  0.1  123456  7890 pts/0    S    12:34   0:00 /bin/bash mon_script.sh
+
+Ici, le PID est 12345.
+📌 Étape 2 : Arrêter le Processus
+
+Utilise kill pour l’arrêter proprement :
+
+kill 12345
+
+Si cela ne fonctionne pas, force l’arrêt avec -9 :
+
+kill -9 12345
+
+🔹 2️⃣ Arrêter un Processus avec pkill
+
+Si tu connais le nom du script ou du programme, tu peux l’arrêter directement :
+
+pkill -f nom_du_script
+
+Exemple :
+
+pkill -f mon_script.sh
+
+Cela ferme tous les processus correspondant à mon_script.sh.
+🔹 3️⃣ Utiliser jobs et fg / kill
+
+Si tu as lancé un script avec & et qu’il tourne en arrière-plan dans ton terminal :
+📌 Étape 1 : Voir les processus en arrière-plan
+
+jobs -l
+
+Exemple de sortie :
+
+[1]+  12345 Running   ./mon_script.sh &
+
+Le PID est 12345.
+📌 Étape 2 : Ramener le script en avant-plan
+
+fg %1
+
+Puis, pour l’arrêter proprement, appuie sur CTRL + C.
+
+Si fg ne fonctionne pas, tue-le avec :
+
+kill %1
+
+🔹 4️⃣ Utiliser htop pour Trouver et Tuer le Processus
+
+Si tu as htop installé (sinon installe-le avec sudo apt install htop), fais :
+
+htop
+
+    Cherche ton script avec les flèches.
+    Sélectionne-le et appuie sur F9.
+    Choisis 9 pour tuer le processus.
+
+✅ Résumé Rapide
+
+    Lister les processus et tuer avec kill :
+
+ps aux | grep mon_script.sh
+kill -9 12345
+
+Tuer un processus avec pkill :
+
+pkill -f mon_script.sh
+
+Lister les jobs et les arrêter :
+
+jobs -l
+fg %1  # Puis CTRL + C
+
+Utiliser htop pour tuer un processus :
+
+htop
+
+
+
+	root@EECS18:~# ps aux | grep s
+script.sh  snap/      
+	root@EECS18:~# ps aux | grep script.sh 
+root       35668  0.0  0.0  12652  3712 pts/8    S+   13:46   0:00 /bin/bash ./script.sh
+root       35689  0.0  0.0  11780  2560 pts/6    S+   13:47   0:00 grep --color=auto script.sh
+	root@EECS18:~# kill -9 35668
+
+LE script de la section 4 du TP20fev25 sera arrêté grâce à la commande `kill -9 35668`
