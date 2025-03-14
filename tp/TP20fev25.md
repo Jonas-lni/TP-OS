@@ -529,3 +529,10 @@ puis dans 	`crontab -e` on ecrit la commande suivante:
 * * * * * /home/user18/jonas1.sh >> processus.txt
 
 et ça devrait marcher, nous afficher tout ce qu'on lui a demandé toute la période qu'on lui a demandé. 
+
+
+**at**
+	
+	xclock | at now + 5 min 
+
+cette commande affiche l'heure dans 5 minutes 
