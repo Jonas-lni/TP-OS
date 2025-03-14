@@ -512,3 +512,20 @@ les backup : voir déf
 **crontab** voir cette commande
 
 **cron notificartob** ; pour empecher ded pteque =
+
+
+
+il faut créer un script avec ce qu'on lui demainde:
+dans notre car le script était 
+
+```#!/bin/sh
+date
+ps
+```
+on lui donne les droits d'execution avcecx chmod +x script.sh
+
+puis dans 	`crontab -e` on ecrit la commande suivante:
+
+* * * * * /home/user18/jonas1.sh >> processus.txt
+
+et ça devrait marcher, nous afficher tout ce qu'on lui a demandé toute la période qu'on lui a demandé. 
