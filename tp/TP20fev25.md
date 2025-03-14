@@ -536,3 +536,8 @@ et ça devrait marcher, nous afficher tout ce qu'on lui a demandé toute la pér
 	xclock | at now + 5 min 
 
 cette commande affiche l'heure dans 5 minutes 
+
+****
+	date > /home/user18/date.txt | at now + 1 min 
+
+dans cette commande nous avons demander de nous afficher la date toutes les une minutes et de diriger le resultat dans le ficher date.txt qui se trouve dans le chemin /home/user18
