@@ -541,3 +541,5 @@ cette commande affiche l'heure dans 5 minutes
 	date > /home/user18/date.txt | at now + 1 min 
 
 dans cette commande nous avons demander de nous afficher la date toutes les une minutes et de diriger le resultat dans le ficher date.txt qui se trouve dans le chemin /home/user18
+
+il est recommandé de diriger le résultat de la demande cron et at dans un fichier 
