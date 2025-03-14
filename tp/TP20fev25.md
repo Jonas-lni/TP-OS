@@ -1,5 +1,7 @@
 # TP GESTION DES PROCESSUS SOUS LINUX
 
+**cours dans slide process**
+ 
 ## voir l'ensemble des commande suivantes :
 xclock
  1887  xclock&
@@ -375,3 +377,138 @@ les commandes :  **top** et **kill** sont les plus importantes dans ce TP : on l
  
 
 `cpufreq-set -g powersave`  et `cpufreq-set -g performance` pour mettre dans powersave et performance 
+
+
+## 11/ at et cron
+
+cette commande consiste à lancer un script à une heure programmée 
+
+exemple:
+	
+	 at now +2min -f tache-at.sh
+	 at 7:30 25.12.23 -f tache_cmd_at.sh
+	 at 00:00 +2 days -f tache_md_at.sh 
+
+par defaut at envoie une notification par mail si le mail est configuré, il envoi un email que si le mail est configuré 
+
+pour indiquer d'envoyer un mail même si la tache ne fournit rien sur la sortie standartd option -m 
+
+**exemple:**
+
+	rm tempo.txt | at -m tomorrow 
+
+pour ne pas recevoir de notification par mail, option -M
+
+**exemple:**  eteint toi à miniuit 
+
+	echo "shutdown -h now" | at -M 00:00    
+
+
+atq (at -l) liste les taches en cours
+
+La commande **cron** sur Linux est un planificateur de tâches qui permet d’exécuter des scripts ou des commandes à des intervalles de temps définis automatiquement. Elle est gérée par le service **crond** et utilise un fichier appelé **crontab** pour stocker les tâches programmées.
+
+---
+
+### 📌 **1. Structure d’une ligne crontab**
+Une tâche cron est définie dans **crontab** avec une ligne au format suivant :
+
+```
+* * * * * commande_à_exécuter
+│ │ │ │ │
+│ │ │ │ └── Jour de la semaine (0 - 7) [0 et 7 = Dimanche]
+│ │ │ └──── Mois (1 - 12)
+│ │ └────── Jour du mois (1 - 31)
+│ └──────── Heure (0 - 23)
+└────────── Minute (0 - 59)
+```
+
+✅ **Exemple :** Exécuter un script tous les jours à 3h30 du matin :
+```bash
+30 3 * * * /chemin/vers/script.sh
+```
+
+---
+
+### 📌 **2. Commandes de gestion de crontab**
+| Commande | Description |
+|----------|------------|
+| `crontab -e` | Modifier le crontab de l'utilisateur |
+| `crontab -l` | Afficher les tâches cron de l'utilisateur |
+| `crontab -r` | Supprimer le crontab de l'utilisateur |
+| `crontab -u utilisateur -e` | Modifier le crontab d’un autre utilisateur (root seulement) |
+
+---
+
+### 📌 **3. Exemples d’utilisation**
+✅ **Exécuter un script chaque jour à minuit :**
+```bash
+0 0 * * * /chemin/vers/script.sh
+```
+
+✅ **Exécuter une commande tous les lundis à 6h15 du matin :**
+```bash
+15 6 * * 1 /chemin/vers/script.sh
+```
+
+✅ **Exécuter une commande toutes les 5 minutes :**
+```bash
+*/5 * * * * /chemin/vers/script.sh
+```
+
+✅ **Rediriger la sortie d’une tâche dans un fichier log :**
+```bash
+0 0 * * * /chemin/vers/script.sh >> /var/log/script.log 2>&1
+```
+
+---
+
+### 📌 **4. Fichiers système liés à cron**
+- **`/etc/crontab`** → Fichier global pour les tâches planifiées par le système.
+- **`/var/spool/cron/crontabs/`** → Emplacement des crontabs des utilisateurs.
+- **`/etc/cron.d/`** → Dossier contenant des fichiers cron spécifiques.
+
+---
+
+### 📌 **5. Spécificités utiles**
+| Syntaxe | Signification |
+|---------|--------------|
+| `@reboot` | Exécuter au démarrage |
+| `@daily` ou `@midnight` | Exécuter une fois par jour (00:00) |
+| `@weekly` | Exécuter une fois par semaine |
+| `@monthly` | Exécuter une fois par mois |
+| `@yearly` ou `@annually` | Exécuter une fois par an |
+
+✅ **Exemple : Exécuter un script au démarrage du serveur :**
+```bash
+@reboot /chemin/vers/script.sh
+```
+
+---
+
+### 📌 **6. Vérification des logs de cron**
+Pour voir si une tâche cron s’exécute bien, vous pouvez vérifier les logs :
+
+```bash
+cat /var/log/syslog | grep CRON
+```
+
+---
+
+**Résumé :**  
+Cron est un outil puissant pour automatiser des tâches sous Linux. Il fonctionne via des fichiers **crontab**, où chaque ligne représente une tâche planifiée avec un timing précis. 🚀
+les backup : voir déf
+
+**<u>cron</u>**
+
+* * * * * commande_à_exécuter
+│ │ │ │ │
+│ │ │ │ └── Jour de la semaine (0 - 7) [0 et 7 = Dimanche]
+│ │ │ └──── Mois (1 - 12)
+│ │ └────── Jour du mois (1 - 31)
+│ └──────── Heure (0 - 23)
+└────────── Minute (0 - 59)
+
+**crontab** voir cette commande
+
+**cron notificartob** ; pour empecher ded pteque =
