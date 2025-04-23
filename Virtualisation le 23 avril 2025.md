@@ -181,6 +181,8 @@ vncviewer localhost:5900
 Tu veux que je t’aide à configurer ta VM pour démarrer automatiquement avec une interface VNC ou SPICE à chaque boot ?
 
 
+## 5.6 Ajouter un canal de type channel/qemu-guest-agent
+
 **la commande qemu-guest-agent et sudo virsh guestinfo --domain jonas (le nom de la machine dans ce cas est jonas)** dans le **virt-manager** : on ajoute un matériel **canal** on ajoute l'agent et puis dans l'hyperviseur on tape la commande suivante **sudo virsh guestinfo --domain jonas** et on a toutes les informations suivante :
 
 ***
