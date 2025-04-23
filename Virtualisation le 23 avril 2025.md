@@ -181,4 +181,69 @@ vncviewer localhost:5900
 Tu veux que je t’aide à configurer ta VM pour démarrer automatiquement avec une interface VNC ou SPICE à chaque boot ?
 
 
+**la commande qemu-guest-agent et sudo virsh guestinfo --domain jonas (le nom de la machine dans ce cas est jonas)** dans le **virt-manager** : on ajoute un matériel **canal** on ajoute l'agent et puis dans l'hyperviseur on tape la commande suivante **sudo virsh guestinfo --domain jonas** et on a toutes les informations suivante :
 
+***
+user18@EECS18:~$ sudo virsh guestinfo --domain jonas
+user.count          : 1
+user.0.name         : jonas
+user.0.login-time   : 1745413470796
+os.id               : zorin
+os.name             : Zorin OS
+os.pretty-name      : Zorin OS 16.2
+os.version          : 16.2
+os.version-id       : 16
+os.machine          : x86_64
+os.kernel-release   : 5.15.0-138-generic
+os.kernel-version   : #148~20.04.1-Ubuntu SMP Fri Mar 28 14:32:35 UTC 2025
+timezone.name       : CEST
+timezone.offset     : 7200
+hostname            : jonas-Standard-PC-i440FX-PIIX-1996
+fs.count            : 3
+fs.0.name           : sda5
+fs.0.mountpoint     : /
+fs.0.fstype         : ext4
+fs.0.total-bytes    : 9405779968
+fs.0.used-bytes     : 9204039680
+fs.0.disk.count     : 1
+fs.0.disk.0.alias   : hda
+fs.0.disk.0.serial  : QEMU_HARDDISK_QM00001
+fs.0.disk.0.device  : /dev/sda5
+fs.1.name           : sda1
+fs.1.mountpoint     : /boot/efi
+fs.1.fstype         : vfat
+fs.1.total-bytes    : 535805952
+fs.1.used-bytes     : 4096
+fs.1.disk.count     : 1
+fs.1.disk.0.alias   : hda
+fs.1.disk.0.serial  : QEMU_HARDDISK_QM00001
+fs.1.disk.0.device  : /dev/sda1
+fs.2.name           : sdc1
+fs.2.mountpoint     : /media/jonas/fc44f084-4719-4736-b047-48d1a119fddc
+fs.2.fstype         : ext4
+fs.2.total-bytes    : 4919664640
+fs.2.used-bytes     : 24576
+fs.2.disk.count     : 1
+fs.2.disk.0.alias   : hdd
+fs.2.disk.0.serial  : QEMU_HARDDISK_QM00004
+fs.2.disk.0.device  : /dev/sdc1
+if.count            : 2
+if.0.name           : lo
+if.0.hwaddr         : 00:00:00:00:00:00
+if.0.addr.count     : 2
+if.0.addr.0.type    : ipv4
+if.0.addr.0.addr    : 127.0.0.1
+if.0.addr.0.prefix  : 8
+if.0.addr.1.type    : ipv6
+if.0.addr.1.addr    : ::1
+if.0.addr.1.prefix  : 128
+if.1.name           : ens3
+if.1.hwaddr         : 52:54:00:11:5a:bb
+if.1.addr.count     : 2
+if.1.addr.0.type    : ipv4
+if.1.addr.0.addr    : 192.168.122.87
+if.1.addr.0.prefix  : 24
+if.1.addr.1.type    : ipv6
+if.1.addr.1.addr    : fe80::f578:bae5:eed3:18a9
+if.1.addr.1.prefix  : 64
+***
