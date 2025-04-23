@@ -3,7 +3,9 @@ Hyperviseur qui crée un environnement matériel virtualisé
 proxmox : outil de virtualisation au format ISO
 VM : Linux et windows possible - mise en place d'un switch virtuel basic qui connecte les machine. 
 Conainerisation: linux et windows pas possible (doker) -> WSL: c'est une 
+
 ![containirisation.png](./_resources/containirisation.png)
+
 Interfaces réseaux virtuelles - 
 Emulation 
 Emuler sur une machine, une console de jeu c'est possible
@@ -12,6 +14,7 @@ Para-Virtualisation : un driver qui accéde aux ressources sans les avoir virtue
 ## Type de virtualisation
 **Virtualisation** Type1 (bare metal) on utilise dans l'industrie (VMware - hyperV). 
 **Virtualisation** type2 (hosted ) on utilise dans les pc perso, utilisation personnelle.
+
 ![virtualisation.png](./_resources/virtualisation.png)
 
 Lorsque les calculs sont nombreux : il vaut mieux ne pas virtualiser car on a besoin de beaucoup de ressources 
