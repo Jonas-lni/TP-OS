@@ -96,3 +96,89 @@ Chaque VM est déstinée à un service : chaque VM est un serveur
 On peut automatiser le mount 
 
 Un user ne doit pas etre mis sur un serveur, si on lui donne accés, il doit avoir des droits restreints
+
+
+Pour **afficher ta VM démarrée** (c’est-à-dire voir son écran comme si tu étais devant un vrai PC), tu as plusieurs options selon le type de console graphique que tu utilises (Spice, VNC, etc.).
+
+---
+
+## 🧭 1. Vérifier si la VM est bien en cours d'exécution
+
+```bash
+sudo virsh list
+```
+
+Tu verras quelque chose comme :
+
+```
+ Id    Name                           State
+----------------------------------------------------
+ 2     jonas                          running
+```
+
+---
+
+## 🖥️ 2. Ouvrir l'affichage graphique (console de la VM)
+
+### 💡 Si tu es en SPICE (comme dans ta commande `virt-install`)
+
+Utilise :
+
+```bash
+virt-viewer jonas
+```
+
+Si ce n’est pas installé :
+
+```bash
+sudo apt install virt-viewer
+```
+
+Ou, avec interface plus complète :
+
+```bash
+virt-manager
+```
+
+Tu peux aussi lancer :
+
+```bash
+sudo virt-manager
+```
+
+Puis double-cliquer sur la VM « jonas » pour ouvrir la console.
+
+---
+
+## 🖧 3. Alternative : connexion VNC (si configuré)
+
+Si la VM utilise VNC au lieu de SPICE :
+
+```bash
+sudo virsh vncdisplay jonas
+```
+
+Tu obtiendras un port comme `:0`, que tu peux ouvrir avec un client VNC :
+
+```bash
+vncviewer localhost:5900
+```
+
+(`:0` → port 5900, `:1` → port 5901, etc.)
+
+---
+
+## 📍 En résumé :
+
+| Action                            | Commande                                  |
+|-----------------------------------|--------------------------------------------|
+| Voir si la VM est en marche       | `sudo virsh list`                          |
+| Voir la console graphique (SPICE) | `virt-viewer jonas` ou `virt-manager`      |
+| Afficher via VNC                  | `sudo virsh vncdisplay jonas`              |
+
+---
+
+Tu veux que je t’aide à configurer ta VM pour démarrer automatiquement avec une interface VNC ou SPICE à chaque boot ?
+
+
+
