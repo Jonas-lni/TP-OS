@@ -3,7 +3,7 @@ Hyperviseur qui crée un environnement matériel virtualisé
 proxmox : outil de virtualisation au format ISO
 VM : Linux et windows possible - mise en place d'un switch virtuel basic qui connecte les machine. 
 Conainerisation: linux et windows pas possible (doker) -> WSL: c'est une 
-![containirisation.png](../_resources)
+![containirisation.png](:/d11babf98c804a6eb3fc2014e35af13b)
 Interfaces réseaux virtuelles - 
 Emulation 
 Emuler sur une machine, une console de jeu c'est possible
@@ -12,7 +12,7 @@ Para-Virtualisation : un driver qui accéde aux ressources sans les avoir virtue
 ## Type de virtualisation
 **Virtualisation** Type1 (bare metal) on utilise dans l'industrie (VMware - hyperV). 
 **Virtualisation** type2 (hosted ) on utilise dans les pc perso, utilisation personnelle.
-![virtualisation.png](../_resources)
+![virtualisation.png](:/c4ac106ee6554a9686d55ebe5176af1c)
 
 Lorsque les calculs sont nombreux : il vaut mieux ne pas virtualiser car on a besoin de beaucoup de ressources 
 
@@ -88,3 +88,11 @@ chmod +x /home/user18/ISO
 `sudo virt-install  --name=jonas --ram=2048 --vcpus=2 --disk path=/home/user18/TP-OS/VM/vm_zorin.qcow2 --cdrom=/home/user18/ISO/Zorin-OS-16.2-Lite-64-bit-r1.iso --os-variant=generic --network=default --graphics=spice`
 
 **Installation réussie**
+
+Dans le cas de Monsieur Girault: 
+les 50 VM qu'il gére, il les 
+Chaque VM est déstinée à un service : chaque VM est un serveur 
+
+On peut automatiser le mount 
+
+Un user ne doit pas etre mis sur un serveur, si on lui donne accés, il doit avoir des droits restreints
