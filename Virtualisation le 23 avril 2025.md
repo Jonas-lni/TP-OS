@@ -44,3 +44,45 @@ Snapshot : il permet de réaliser une **photo **
 live migration : migration à chaud - migration : déplacement d'une VM sans l'arrêter 
 
 
+
+`sudo virt-install  --name=jonas --ram=2048 --vcpus=2 --disk path=/home/user18/TP-OS/VM/vm_zorin.qcow2 --cdrom=/home/user18/ISO/Zorin-OS-16.2-Lite-64-bit-r1.iso --os-variant=generic --network=default --graphics=spice
+WARNING  il se peut que /home/user18/ISO/Zorin-OS-16.2-Lite-64-bit-r1.iso ne soit pas accessible à l’hyperviseur. Vous devrez fournir à l’utilisateur « libvirt-qemu » des permissions de recherche pour les répertoires suivants : ['/home/user18']
+WARNING  il se peut que /home/user18/TP-OS/VM/vm_zorin.qcow2 ne soit pas accessible à l’hyperviseur. Vous devrez fournir à l’utilisateur « libvirt-qemu » des permissions de recherche pour les répertoires suivants : ['/home/user18']
+WARNING  il se peut que /home/user18/ISO/Zorin-OS-16.2-Lite-64-bit-r1.iso ne soit pas accessible à l’hyperviseur. Vous devrez fournir à l’utilisateur « libvirt-qemu » des permissions de recherche pour les répertoires suivants : ['/home/user18']
+WARNING  Using --osinfo generic, VM performance may suffer. Specify an accurate OS for optimal results.
+Début d’installation…
+ERROR    Cannot access storage file '/home/user18/TP-OS/VM/vm_zorin.qcow2' (as uid:64055, gid:109): Permission denied
+L’installation du domaine ne semble pas avoir réussi.
+Si elle a réussi, vous pouvez démarrer le domaine en lançant :
+ virsh --connect qemu:///system start jonas
+sinon, recommencer l’installation.`
+## creation d'une vm via la commande virt-install: 
+`sudo virt-install  --name=jonas --ram=2048 --vcpus=2 --disk path=/home/user18/TP-OS/VM/vm_zorin.qcow2 --cdrom=/home/user18/ISO/Zorin-OS-16.2-Lite-64-bit-r1.iso --os-variant=generic --network=default --graphics=spice`
+
+## Donner les droits d'accés au dossier et fichiers : 
+L'erreur que tu rencontres vient d’un **problème de permissions** : l’utilisateur `libvirt-qemu`, utilisé par le service `libvirt`, **n’a pas accès** aux fichiers de ton dossier personnel (`/home/user18`).
+
+---
+
+## 🔐 Explication rapide
+
+`virt-install` s’exécute via `libvirt`, qui utilise le compte système `libvirt-qemu`. Ce compte ne peut pas lire ton dossier personnel par défaut (à cause des permissions de sécurité Linux).
+
+---
+
+## ✅ Solution : Donner les droits d’accès au répertoire
+
+### Option 1 : Modifier les permissions avec `chmod +x`
+
+Donne les droits de traversée (recherche) au groupe "others" sur ton dossier personnel **et les sous-dossiers concernés** :
+
+```bash
+chmod +x /home/user18
+chmod +x /home/user18/TP-OS
+chmod +x /home/user18/TP-OS/VM
+chmod +x /home/user18/ISO
+```
+
+💡 Cela ne rend pas les fichiers lisibles, mais permet au processus `libvirt-qemu` de traverser les répertoires.
+
+**Installation réussie**
