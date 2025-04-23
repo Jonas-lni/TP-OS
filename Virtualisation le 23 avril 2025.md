@@ -185,8 +185,7 @@ Tu veux que je t’aide à configurer ta VM pour démarrer automatiquement avec 
 
 **la commande qemu-guest-agent et sudo virsh guestinfo --domain jonas (le nom de la machine dans ce cas est jonas)** dans le **virt-manager** : on ajoute un matériel **canal** on ajoute l'agent et puis dans l'hyperviseur on tape la commande suivante **sudo virsh guestinfo --domain jonas** et on a toutes les informations suivante :
 
-***
-user18@EECS18:~$ sudo virsh guestinfo --domain jonas
+`sudo virsh guestinfo --domain jonas`
 user.count          : 1
 user.0.name         : jonas
 user.0.login-time   : 1745413470796
